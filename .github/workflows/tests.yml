@@ -27,4 +27,4 @@ jobs:
           uses: actions/github-script@v3
           with:
             script: |
-                core.setFailed('Output mismatch ${{ steps.run-the-action.outputs.greeting }}')
+                core.setFailed('Output mismatch "${{ steps.run-the-action.outputs.greeting }}" != "Yosi => test"') 
