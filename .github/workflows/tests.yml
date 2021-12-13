@@ -21,7 +21,7 @@ jobs:
         - uses: ./
           id: run-the-action
           with:
-            name_param: "Yosi"
+            name_param: 'Yosi'
         - name: 
           if: '${{ steps.run-the-action.outputs.greeting }}' != 'Yosi => test'
           uses: actions/github-script@v3
