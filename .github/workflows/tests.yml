@@ -1,5 +1,3 @@
-
-   
 name: 'test'
 on: push
 
@@ -18,13 +16,12 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - uses: actions/checkout@v2
-
         - uses: ./
           id: run-the-action
           with:
             name_param: 'Yosi'
         - name: 
-          if: ${{ steps.run-the-action.outputs.greeting }} != "Yosi => test"
+          if: ${{ steps.run-the-action.outputs.greeting  != 'Yosi => test' }}
           uses: actions/github-script@v3
           with:
             script: |
