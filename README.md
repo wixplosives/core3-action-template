@@ -1,6 +1,6 @@
 # Core3 github action teamplate
 
-<p align="center">
+<p align="left">
   <a href="https://github.com/wixplosives/core3-action-template/actions/workflows/tests.yml"><img alt="typescript-action status" src="https://github.com/wixplosives/core3-action-template/actions/workflows/tests.yml/badge.svg"></a>
 </p>
 
