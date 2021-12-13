@@ -23,7 +23,7 @@ jobs:
           with:
             name_param: "Yosi"
         - name: 
-          if: ${{ steps.run-the-action.outputs.greeting }} != 'Yosi => test'
+          if: '${{ steps.run-the-action.outputs.greeting }}' != 'Yosi => test'
           uses: actions/github-script@v3
           with:
             script: |
