@@ -24,7 +24,7 @@ $ npm run test
 Actions are run from GitHub repos so we will checkin the packed dist folder.
 
 ```bash
-$ npm run package
+$ npm run bundle
 $ git add dist
 $ git commit -a -m "prod dependencies"
 $ git push origin releases/v1

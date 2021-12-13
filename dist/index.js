@@ -8,8 +8,17 @@ require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.generateGreeting = void 0;
-const generateGreeting = ({ name, jobName }) => {
-    const result = `Welcome ${name} to ${jobName}`;
+const wait = async (milliseconds) => {
+    return new Promise((resolve) => {
+        if (isNaN(milliseconds)) {
+            throw new Error('milliseconds not a number');
+        }
+        setTimeout(() => resolve('done!'), milliseconds);
+    });
+};
+const generateGreeting = async ({ name, jobName }) => {
+    await wait(100);
+    const result = `${name} => ${jobName}`;
     return result;
 };
 exports.generateGreeting = generateGreeting;
@@ -47,9 +56,9 @@ const helpers_1 = __nccwpck_require__(5008);
 const github_1 = __nccwpck_require__(5438);
 async function run() {
     const nameParam = core.getInput('name_param');
-    const greeting = (0, helpers_1.generateGreeting)({
+    const greeting = await (0, helpers_1.generateGreeting)({
         name: nameParam,
-        jobName: github_1.context.job
+        jobName: github_1.context.job,
     });
     core.setOutput('greeting', greeting);
 }
