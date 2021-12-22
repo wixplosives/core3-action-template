@@ -7,14 +7,19 @@
 This is basic typescript project that implements github action
 
 ## Install dependencies
+
 ```
 $ npm ci
 ```
+
 ## Build
+
 ```
 $ npm run build
 ```
-## Test 
+
+## Test
+
 ```
 $ npm run test
 ```
@@ -41,7 +46,7 @@ You can now validate the action by referencing `./` in a workflow in your repo (
 ```yaml
 uses: ./
 with:
-    name_param: Yosi
+  name_param: Yosi
 ```
 
 See the [actions tab](https://github.com/wixplosives/core3-action-template/actions) for runs of this action! :rocket:
