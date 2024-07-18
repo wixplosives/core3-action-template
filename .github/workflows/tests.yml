@@ -1,5 +1,5 @@
 name: 'test'
-on: push
+on: pull_request
 
 jobs:
   run-build-and-test: # make sure build/ci work properly
