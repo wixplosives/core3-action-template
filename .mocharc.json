@@ -1,5 +1,4 @@
 {
-  "require": ["@esbuild-kit/esm-loader"],
   "extension": ["js", "json", "ts", "tsx"],
   "slow": 200,
   "timeout": 10000,
