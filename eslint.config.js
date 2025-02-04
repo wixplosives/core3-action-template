@@ -1,5 +1,6 @@
+// eslint.config.js
 export default [
-    {
+  {
       ignores: [
         "dist/",
         "lib/",
@@ -7,4 +8,3 @@ export default [
         ],
     },
   ];
-  
